@@ -40,39 +40,60 @@ const Register = () => {
     );
   };
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     const form = document.getElementById("register-form");
 
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-      
-        let elem = e.target;
-      
-        let formData = {
-          name: elem.name.value,
-          email: elem.email.value,
-          password: elem.password.value,
-          repPassword: elem.repPassword.value,
-        }
-      
-        try {
-          const response = await axios.post("http://localhost:8888/catopia/register", {
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+
+      if (isSubmitting) {
+        return; // Если уже отправлено, не отправляйте повторно
+      }
+
+      setIsSubmitting(true);
+
+      let elem = e.target;
+
+      let formData = {
+        name: elem.name.value,
+        email: elem.email.value,
+        password: elem.password.value,
+        repPassword: elem.repPassword.value,
+      };
+
+      try {
+        const response = await axios.post(
+          "http://localhost:8888/catopia/register",
+          {
             name: formData.name,
             email: formData.email,
             password: formData.password,
             repPassword: formData.repPassword,
-          }, {
+          },
+          {
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
             },
-          });
-      
-          console.log(response.data);  // Выведите ответ сервера в консоль для отладки
-        } catch (error) {
-          console.error(error);
-        }
-      });
-  }, [isPasswordVisible, isRepPasswordVisible]);
+          }
+        );
+
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
+
+    form.addEventListener("submit", handleSubmit);
+
+    // Возвращаем функцию очистки, которая удаляет слушатель при размонтировании компонента
+    return () => {
+      form.removeEventListener("submit", handleSubmit);
+    };
+  }, [isPasswordVisible, isRepPasswordVisible, isSubmitting]);
   return (
     <div className="register-container">
       <div className="register-img">
@@ -143,7 +164,11 @@ const Register = () => {
           </button>
           <p className="register-text">
             Already have an account?
-            <NavLink to="/catopia/login" href="#" className="register-link link">
+            <NavLink
+              to="/catopia/login"
+              href="#"
+              className="register-link link"
+            >
               &nbsp;Log In
             </NavLink>
           </p>
