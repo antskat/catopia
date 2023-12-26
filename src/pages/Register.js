@@ -112,7 +112,7 @@ const Register = () => {
 
       try {
         const response = await axios.post(
-          "http://localhost:8888/catopia/register",
+          "https://antskat.github.io/backend-for-catopia/register",
           formData,
           {
             headers: {
