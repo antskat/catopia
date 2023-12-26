@@ -15,7 +15,7 @@ import ScrollToTop from "./utils/scrollToTop";
 function App() {
     const location = useLocation();
 
-    const hide = location.pathname === "/catopia/register" || location.pathname === "/catopia/login";
+    const hide = location.pathname === "/register" || location.pathname === "/login";
 
 
     return (
@@ -25,9 +25,9 @@ function App() {
             <ScrollControl />
 
             <Routes>
-                <Route path="/catopia/" element={<Home />} />
-                <Route path="/catopia/register" element={<Register />} />
-                <Route path="/catopia/login" element={<Login />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
 
             {!hide && <Footer />}   
