@@ -137,7 +137,7 @@ const Login = () => {
           <span className="user-guestion">
             New User?
             <NavLink
-              to="/catopia/register"
+              to="/register"
               className="link signup-link"
               href="#"
             >
