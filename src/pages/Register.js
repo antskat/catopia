@@ -234,7 +234,7 @@ const Register = () => {
 
           <p className="register-text">
             Already have an account?
-            <NavLink to="/catopia/login" className="register-link link">
+            <NavLink to="/login" className="register-link link">
               &nbsp;Log In
             </NavLink>
           </p>

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <ul className="footer-list list">
           <li className="footer-list-item">
-            <NavLink to="/catopia/" className="link footer-logo">
+            <NavLink to="/" className="link footer-logo">
               cat
               <span className="footer-logo-span">
                 <LogoSvg />
@@ -37,22 +37,22 @@ const Footer = () => {
             <h3 className="footer-list-title">Pages</h3>
             <ul className="footer-pages-list list">
               <li className="footer-pages-list-item">
-                <NavLink to="/catopia/" className="footer-link link">
+                <NavLink to="/" className="footer-link link">
                   Home
                 </NavLink>
               </li>
               <li className="footer-pages-list-item">
-                <NavLink to="/catopia/about-cats" className="footer-link link">
+                <NavLink to="/about-cats" className="footer-link link">
                   About cats
                 </NavLink>
               </li>
               <li className="footer-pages-list-item">
-                <NavLink to="/catopia/gallery" className="footer-link link">
+                <NavLink to="//gallery" className="footer-link link">
                   Gallery
                 </NavLink>
               </li>
               <li className="footer-pages-list-item">
-                <NavLink to="/catopia/about-us" className="footer-link link">
+                <NavLink to="/about-us" className="footer-link link">
                   About us
                 </NavLink>
               </li>
