@@ -1,5 +1,14 @@
 import React from "react";
-import { MuteSvg, HeartSvg, VetSvg, HouseSvg } from "../components/Svg.js";
+import {
+  MuteSvg,
+  HeartSvg,
+  VetSvg,
+  HouseSvg,
+  OneSvg,
+  TwoSvg,
+  ThreeSvg,
+} from "../components/Svg.js";
+import cats from "../img/cats-svg.jpg";
 
 const Home = () => {
   return (
@@ -54,6 +63,61 @@ const Home = () => {
                 <h3 className="why-cats-list-title">You don’t need</h3>
                 <p className="why-cats-list-text">to walk them</p>
               </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section className="did-you-know-section">
+        <div className="container">
+          <img src={cats} alt="cats" />
+          <div className="did-you-know-container">
+            <h2 className="did-you-know-title">Did you know?</h2>
+            <p className="did-you-know-text">
+              Studies have shown that cats have a calming effect on their
+              owners, from the soothing action of petting to purring being an
+              aid in falling asleep
+              <br />
+              <br />
+              <span className="did-you-know-span">
+                Cats can even play a part in lowering your blood pressure and
+                risk of a heart attack. One 10-year study has even shown that
+                cat owners were 30% less likely to die of a heart attack or
+                stroke than non-cat owners
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="how-it-works-section">
+        <div className="container">
+          <h2 className="how-it-works-title">
+            BEGIN YOUR JOURNEY IN THREE STEPS
+          </h2>
+          <ul className="how-it-works-list list">
+            <li className="how-it-works-item">
+              <div className="list-item-number">
+                <OneSvg />
+              </div>
+              <p className="how-it-works-text">
+                First of all, familiarize yourself with the
+                website navigation
+              </p>
+            </li>
+            <li className="how-it-works-item">
+              <div className="list-item-number">
+                <TwoSvg />
+              </div>
+              <p className="how-it-works-text">
+                Next, register. It <br /> won't take much <br /> time.
+              </p>
+            </li>
+            <li className="how-it-works-item">
+              <div className="list-item-number">
+                <ThreeSvg />
+              </div>
+              <p className="how-it-works-text">
+                Congratulations! <br /> Enjoy your time <br /> here:)
+              </p>
             </li>
           </ul>
         </div>

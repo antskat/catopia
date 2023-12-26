@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "../img/catopia.png";
 import "./login.css";
 import "./register.css";
 import cats from "../img/black-and-grey-cats-img.jpg";
@@ -6,6 +7,9 @@ import {
   EmailSvg,
   VisibilityOffSvg,
   VisibilityOnSvg,
+  GoogleSvg,
+  FacebookSvg,
+  TwitterSvg,
 } from "../components/Svg.js";
 import { togglePasswordVisibility } from "../utils/passwordVisibility.js";
 import axios from "axios";
@@ -75,11 +79,12 @@ const Login = () => {
   }, [isPasswordVisible, isRepPasswordVisible]);
   return (
     <div className="login-container">
+      {/* <NavLink to="/catopia/" className="back link"></NavLink> */}
       <section className="login">
         <div className="login-content">
           <h1 className="login-title">Log In</h1>
           <form id="login-form" className="login-form">
-            <div className="register-input-container">
+            <div className="login-input-container">
               <input
                 className="login-input"
                 type="email"
@@ -88,7 +93,7 @@ const Login = () => {
               />
               <EmailSvg />
             </div>
-            <div className="register-input-container">
+            <div className="login-input-container">
               <input
                 id="password"
                 className="login-input"
@@ -97,7 +102,7 @@ const Login = () => {
                 placeholder="Password"
               />
               <button
-                className="visibility-btn"
+                className="login-visibility-btn"
                 type="button"
                 onClick={() => toggleVisibility("password", true)}
               >
@@ -117,6 +122,18 @@ const Login = () => {
               Login Now
             </button>
           </form>
+          <p className="or-text login-or-text">or</p>
+          <div className="login-link-container">
+            <a>
+              <GoogleSvg />
+            </a>
+            <a>
+              <FacebookSvg />
+            </a>
+            <a>
+              <TwitterSvg />
+            </a>
+          </div>
           <span className="user-guestion">
             New User?
             <NavLink
@@ -130,7 +147,16 @@ const Login = () => {
         </div>
       </section>
       <section className="welcome">
-        <h2 className="welcome-title">WELCOME TO</h2>
+        <div className="login-welcome-container">
+          <h2 className="welcome-text">WELCOME TO</h2>
+          <p className="logo link">
+            cat
+            <span>
+              <img src={logo} alt="logo" />
+            </span>
+            pia
+          </p>
+        </div>
         <img className="welcome-img" src={cats} alt="black and grey cats" />
       </section>
     </div>

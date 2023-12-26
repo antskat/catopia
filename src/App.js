@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import ScrollControl from "./utils/scrollControl";
 import {
     Routes,
     Route,
@@ -20,6 +21,7 @@ function App() {
         <div className="App">
             <ScrollToTop />
             {!hideNavbar && <Navbar />}
+            <ScrollControl />
 
             <Routes>
                 <Route path="/catopia/" element={<Home />} />

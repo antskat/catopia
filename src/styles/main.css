@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --main-color: #708b75;
-  --accent-color: #EDAFB8;
+  --accent-color: #edafb8;
 }
 * {
   box-sizing: border-box;
@@ -194,4 +194,105 @@ hr {
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
+}
+.did-you-know-section > .container {
+  display: flex;
+  gap: 20px;
+}
+.did-you-know-container {
+  padding: 34px 34px 0px;
+  border-radius: 30px;
+  background: rgba(112, 139, 117, 0.25);
+  height: 655px;
+}
+.did-you-know-title,
+.did-you-know-text,
+.did-you-know-span {
+  color: var(--main-color);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: normal;
+}
+.did-you-know-text {
+  color: rgba(112, 139, 117, 0.75);
+  font-size: 32px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.did-you-know-span {
+  color: var(--main-color);
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.how-it-works-section {
+  padding-bottom: 60px;
+}
+.how-it-works-title {
+  color: var(--main-color);
+  position: relative;
+  bottom: 50px;
+  text-align: right;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 4.8px;
+}
+.how-it-works-list {
+  display: flex;
+  justify-content: center;
+  gap: 104px;
+}
+.how-it-works-item {
+  border-radius: 225px 30px 30px 30px;
+  background: rgba(112, 139, 117, 0.25);
+  padding: 310px 46px 110px 40px;
+  position: relative;
+  width: 480px;
+  color: var(--main-color);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 3.84px;
+  z-index: 1;
+}
+.how-it-works-item:nth-child(2),
+.how-it-works-item:nth-child(3) {
+  background-color: rgba(112, 139, 117, 0.5);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 3.84px;
+}
+.how-it-works-item:nth-child(3) {
+  background-color: rgba(112, 139, 117, 0.75);
+  color: #fff;
+}
+.how-it-works-item:after {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  bottom: -30px;
+  right: -30px;
+  background-image: url(../img/paw.svg);
+  width: 170px;
+  height: 170px;
+}
+.how-it-works-item:nth-child(2)::after {
+  background-image: url(../img/paw1.svg);
+}
+.how-it-works-item:nth-child(3)::after {
+  background-image: url(../img/paw2.svg);
+}
+.list-item-number {
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 49px 80px;
+  border-radius: 125px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
