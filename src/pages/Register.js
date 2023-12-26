@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../img/catopia.png";
-import "./register.css";
+import "./styles/register.css";
 import {
   ManSvg,
   EmailSvg,
@@ -9,6 +8,7 @@ import {
   GoogleSvg,
   FacebookSvg,
   TwitterSvg,
+  LogoSvg,
 } from "../components/Svg.js";
 import cats from "../img/orange-and-grey-cats-img.png";
 import { togglePasswordVisibility } from "../utils/passwordVisibility.js";
@@ -142,8 +142,8 @@ const Register = () => {
         <h2 className="welcome-text">Welcome to</h2>
         <p className="logo link">
           cat
-          <span>
-            <img src={logo} alt="logo" />
+          <span className="logo-span">
+            <LogoSvg />
           </span>
           pia
         </p>
@@ -152,13 +152,13 @@ const Register = () => {
       <div className="register-content">
         <h2 className="register-title">Create Account</h2>
         <div className="link-container">
-          <a>
+          <a className="google">
             <GoogleSvg />
           </a>
-          <a>
+          <a className="facebook">
             <FacebookSvg />
           </a>
-          <a>
+          <a className="twitter">
             <TwitterSvg />
           </a>
         </div>

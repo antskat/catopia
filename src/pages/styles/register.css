@@ -27,6 +27,7 @@
 }
 .logo {
   color: var(--main-color);
+  display: flex;
   font-size: 48px;
   font-weight: 900;
   line-height: normal;
@@ -199,4 +200,27 @@ input[type="checkbox"]:checked::after {
   border: solid var(--main-color);
   border-width: 0 2px 2px 0;
   cursor: pointer;
+}
+.google > svg,
+.facebook > svg,
+.twitter > svg,
+.logo-span > svg {
+  fill: #708b75;
+}
+.google > svg {
+  width: 60px;
+  height: 60px;
+}
+.facebook > svg {
+  width: 37px;
+  height: 60px;
+}
+.twitter > svg {
+  width: 70px;
+  height: 60px;
+}
+.logo-span > svg {
+  position: relative;
+  top: 2px;
+  right: 2px;
 }

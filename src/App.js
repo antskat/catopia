@@ -1,5 +1,6 @@
 import "./styles/main.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -14,13 +15,13 @@ import ScrollToTop from "./utils/scrollToTop";
 function App() {
     const location = useLocation();
 
-    const hideNavbar = location.pathname === "/catopia/register" || location.pathname === "/catopia/login";
+    const hide = location.pathname === "/catopia/register" || location.pathname === "/catopia/login";
 
 
     return (
         <div className="App">
             <ScrollToTop />
-            {!hideNavbar && <Navbar />}
+            {!hide && <Navbar />}
             <ScrollControl />
 
             <Routes>
@@ -28,6 +29,8 @@ function App() {
                 <Route path="/catopia/register" element={<Register />} />
                 <Route path="/catopia/login" element={<Login />} />
             </Routes>
+
+            {!hide && <Footer />}   
         </div>
     )
 }

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "../img/catopia.png";
-import "./login.css";
-import "./register.css";
+import "./styles/login.css";
+import "./styles/register.css";
 import cats from "../img/black-and-grey-cats-img.jpg";
 import {
   EmailSvg,
@@ -10,6 +9,7 @@ import {
   GoogleSvg,
   FacebookSvg,
   TwitterSvg,
+  LogoSvg,
 } from "../components/Svg.js";
 import { togglePasswordVisibility } from "../utils/passwordVisibility.js";
 import axios from "axios";
@@ -124,13 +124,13 @@ const Login = () => {
           </form>
           <p className="or-text login-or-text">or</p>
           <div className="login-link-container">
-            <a>
+            <a className="google">
               <GoogleSvg />
             </a>
-            <a>
+            <a className="facebook">
               <FacebookSvg />
             </a>
-            <a>
+            <a className="twitter">
               <TwitterSvg />
             </a>
           </div>
@@ -151,8 +151,8 @@ const Login = () => {
           <h2 className="welcome-text">WELCOME TO</h2>
           <p className="logo link">
             cat
-            <span>
-              <img src={logo} alt="logo" />
+            <span className="logo-span">
+              <LogoSvg />
             </span>
             pia
           </p>
