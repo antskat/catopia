@@ -114,9 +114,9 @@ const Login = () => {
                 <input className="remember" type="checkbox" name="remember" />
                 <p className="login-checkbox-text">Remember me</p>
               </div>
-              <a className="link password-link" href="#">
+              <NavLink to="/forgot-password" className="link password-link" >
                 Forgot your password?
-              </a>
+              </NavLink>
             </div>
             <button className="submit-login-btn" type="submit">
               Login Now

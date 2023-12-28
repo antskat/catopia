@@ -1,4 +1,3 @@
-import React from "react";
 import {
   MuteSvg,
   HeartSvg,
@@ -9,6 +8,7 @@ import {
   ThreeSvg,
 } from "../components/Svg.js";
 import cats from "../img/cats-svg.jpg";
+import "../styles/main.css"
 
 const Home = () => {
   return (
