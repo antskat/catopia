@@ -10,6 +10,7 @@ import ScrollToTop from "./utils/scrollToTop";
 import AboutCats from "./pages/AboutCats";
 import ForgotPass from "./pages/ForgotPass";
 import ConfirmPass from "./pages/ConfirmPass";
+import ChangePass from "./pages/ChangePass";
 
 function App() {
   const location = useLocation();
@@ -18,7 +19,8 @@ function App() {
     location.pathname === "/register" ||
     location.pathname === "/login" ||
     location.pathname === "/forgot-password" ||
-    location.pathname === "/confirm";
+    location.pathname === "/confirm" ||
+    location.pathname === "/change-password";
 
   return (
     <div className="App">
@@ -33,6 +35,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPass />} />
         <Route path="/confirm" element={<ConfirmPass />} />
+        <Route path="/change-password" element={<ChangePass />} />
       </Routes>
 
       {!hide && <Footer />}

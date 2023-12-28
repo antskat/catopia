@@ -71,7 +71,7 @@ const ConfirmPass = () => {
       );
 
       console.log(response.data);
-      navigate("/login");
+      navigate("/change-password");
     } catch (error) {
       console.error(error);
     }
