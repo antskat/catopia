@@ -1,20 +1,31 @@
 {
   "files": {
-    "main.css": "/catopia/static/css/main.f7680031.css",
-    "main.js": "/catopia/static/js/main.94c6a598.js",
+    "main.css": "/catopia/static/css/main.2dfd7cfc.css",
+    "main.js": "/catopia/static/js/main.4e0bdeb0.js",
     "static/media/orange-and-grey-cats-img.png": "/catopia/static/media/orange-and-grey-cats-img.ae3620e894d392c50873.png",
+    "static/media/about-hero-bg.jpg": "/catopia/static/media/about-hero-bg.05e6743c706ec278b100.jpg",
+    "static/media/british-shortcair-cat.png": "/catopia/static/media/british-shortcair-cat.d0285bda2d0e7ed642d4.png",
+    "static/media/tabby-cat.png": "/catopia/static/media/tabby-cat.c1dddcd76e5d73ca773c.png",
+    "static/media/siamese-cat.png": "/catopia/static/media/siamese-cat.000ff055cc79513b521c.png",
+    "static/media/burmese-cat.png": "/catopia/static/media/burmese-cat.7b64faca3cee9dd849de.png",
+    "static/media/exotic-shortcair-cat.png": "/catopia/static/media/exotic-shortcair-cat.e943881d93b305ccc507.png",
+    "static/media/abyssinian-cat.png": "/catopia/static/media/abyssinian-cat.8cb91ac0fc3b800ab4ca.png",
+    "static/media/american-curl-cat.png": "/catopia/static/media/american-curl-cat.efe59b292b8da8395ace.png",
+    "static/media/sphynx.png": "/catopia/static/media/sphynx.b5b0bc386bd618efdbf8.png",
     "static/media/cats-svg.jpg": "/catopia/static/media/cats-svg.e66bebeeb1c673bebc47.jpg",
+    "static/media/munchkin-cat.png": "/catopia/static/media/munchkin-cat.7c4ffda22d8e7b808ad4.png",
     "static/media/black-and-grey-cats-img.jpg": "/catopia/static/media/black-and-grey-cats-img.8bdc5735ebb4224aa056.jpg",
     "static/media/hero-bg.jpg": "/catopia/static/media/hero-bg.d5c9e9f90933494313ab.jpg",
+    "static/media/cat-card-bg.jpg": "/catopia/static/media/cat-card-bg.7aa4ced54ce63ca3f80a.jpg",
     "static/media/paw1.svg": "/catopia/static/media/paw1.211ffd56e737f0aa9054.svg",
     "static/media/paw.svg": "/catopia/static/media/paw.3af4c33853ffb60f2570.svg",
     "static/media/paw2.svg": "/catopia/static/media/paw2.2586149187f5c27023d1.svg",
     "index.html": "/catopia/index.html",
-    "main.f7680031.css.map": "/catopia/static/css/main.f7680031.css.map",
-    "main.94c6a598.js.map": "/catopia/static/js/main.94c6a598.js.map"
+    "main.2dfd7cfc.css.map": "/catopia/static/css/main.2dfd7cfc.css.map",
+    "main.4e0bdeb0.js.map": "/catopia/static/js/main.4e0bdeb0.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7680031.css",
-    "static/js/main.94c6a598.js"
+    "static/css/main.2dfd7cfc.css",
+    "static/js/main.4e0bdeb0.js"
   ]
 }
