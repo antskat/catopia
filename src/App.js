@@ -11,16 +11,19 @@ import AboutCats from "./pages/AboutCats";
 import ForgotPass from "./pages/ForgotPass";
 import ConfirmPass from "./pages/ConfirmPass";
 import ChangePass from "./pages/ChangePass";
+import AuthMe from "./pages/AuthMe";
+import CatopiaRedirect from "./utils/CatopiaRedirect";
 
 function App() {
   const location = useLocation();
 
   const hide =
-    location.pathname === "/catopia/register" ||
-    location.pathname === "/catopia/login" ||
-    location.pathname === "/catopia/forgot-password" ||
-    location.pathname === "/catopia/confirm" ||
-    location.pathname === "/catopia/change-password";
+    location.pathname === '/catopia/register' ||
+    location.pathname === '/catopia/login' ||
+    location.pathname === '/catopia/forgot-password' ||
+    location.pathname === '/catopia/confirm' ||
+    location.pathname === '/catopia/change-password' ||
+    location.pathname === '/catopia/auth/me';
 
   return (
     <div className="App">
@@ -29,7 +32,9 @@ function App() {
       <ScrollControl />
 
       <Routes>
-        <Route path="/catopia/" element={<Home />} />
+        <Route path="/catopia/" element={<CatopiaRedirect />} />
+        <Route path="/catopia/auth/me" element={<AuthMe />} />
+        <Route path="/catopia/home" element={<Home />} />
         <Route path="/catopia/about-cats" element={<AboutCats />} />
         <Route path="/catopia/register" element={<Register />} />
         <Route path="/catopia/login" element={<Login />} />

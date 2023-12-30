@@ -13,11 +13,14 @@ import {
 } from "../components/Svg.js";
 import { togglePasswordVisibility } from "../utils/passwordVisibility.js";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../utils/authContext.js";
 
 const Login = () => {
+  const { setLoginStatus } = useAuth();
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isRepPasswordVisible, setIsRepPasswordVisible] = useState(false);
+  const navigate = useNavigate();
 
   const toggleVisibility = (inputId, isPassword) => {
     togglePasswordVisibility(inputId);
@@ -69,17 +72,22 @@ const Login = () => {
             },
           }
         );
+        const { token, ...userData} = response.data;
+
+        localStorage.setItem('authToken', token);
 
         console.log(response.data);
         console.log("Login successful");
+        setLoginStatus(true);
+        navigate("/catopia/");
       } catch (error) {
         console.error(error);
+        setLoginStatus(false);
       }
     });
   }, [isPasswordVisible, isRepPasswordVisible]);
   return (
     <div className="login-container">
-      {/* <NavLink to="/catopia/" className="back link"></NavLink> */}
       <section className="login">
         <div className="login-content">
           <h1 className="login-title">Log In</h1>
@@ -137,7 +145,7 @@ const Login = () => {
           <span className="user-guestion">
             New User?
             <NavLink
-              to="/register"
+              to="/catopia/register"
               className="link signup-link"
               href="#"
             >

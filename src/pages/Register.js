@@ -13,13 +13,14 @@ import {
 import cats from "../img/orange-and-grey-cats-img.png";
 import { togglePasswordVisibility } from "../utils/passwordVisibility.js";
 import axios from "axios";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate} from "react-router-dom";
 
 const Register = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isRepPasswordVisible, setIsRepPasswordVisible] = useState(false);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const toggleVisibility = (inputId, isPassword) => {
     togglePasswordVisibility(inputId);
@@ -122,6 +123,8 @@ const Register = () => {
         );
 
         console.log(response.data);
+        console.log("Registration successful");
+        navigate("/catopia/login");
       } catch (error) {
         console.error(error);
       } finally {
@@ -234,7 +237,7 @@ const Register = () => {
 
           <p className="register-text">
             Already have an account?
-            <NavLink to="/login" className="register-link link">
+            <NavLink to="/catopia/login" className="register-link link">
               &nbsp;Log In
             </NavLink>
           </p>

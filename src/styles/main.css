@@ -91,6 +91,11 @@ img {
   display: flex;
   gap: 20px;
 }
+.header-btn-login-container {
+  display: flex;
+  gap: 42px;
+  margin-left: 100px;
+}
 .login-btn,
 .signup-btn {
   border-radius: 30px;
