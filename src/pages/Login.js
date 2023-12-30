@@ -79,7 +79,7 @@ const Login = () => {
         console.log(response.data);
         console.log("Login successful");
         setLoginStatus(true);
-        navigate("/catopia/");
+        navigate("/");
       } catch (error) {
         console.error(error);
         setLoginStatus(false);
@@ -145,7 +145,7 @@ const Login = () => {
           <span className="user-guestion">
             New User?
             <NavLink
-              to="/catopia/register"
+              to="/register"
               className="link signup-link"
               href="#"
             >

@@ -124,7 +124,7 @@ const Register = () => {
 
         console.log(response.data);
         console.log("Registration successful");
-        navigate("/catopia/login");
+        navigate("/login");
       } catch (error) {
         console.error(error);
       } finally {
@@ -140,7 +140,6 @@ const Register = () => {
 
   return (
     <div className="register-container">
-      {/* <NavLink to="/catopia/" className="back link"></NavLink> */}
       <div className="welcome-container">
         <h2 className="welcome-text">Welcome to</h2>
         <p className="logo link">
@@ -237,7 +236,7 @@ const Register = () => {
 
           <p className="register-text">
             Already have an account?
-            <NavLink to="/catopia/login" className="register-link link">
+            <NavLink to="/login" className="register-link link">
               &nbsp;Log In
             </NavLink>
           </p>

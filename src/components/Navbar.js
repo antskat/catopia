@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="container">
-        <NavLink to="/catopia/home" className="logo link">
+        <NavLink to="/home" className="logo link">
           cat
           <span className="logo-span">
             <LogoSvg />
@@ -17,13 +17,13 @@ const Navbar = () => {
         <nav className="nav">
           <ul className="nav-list list">
             <li className="nav-list-item">
-              <NavLink to="/catopia/home" className="nav-link link">
+              <NavLink to="/home" className="nav-link link">
                 Home
               </NavLink>
             </li>
             <li className="nav-list-item">
               <NavLink
-                to="/catopia/about-cats"
+                to="/about-cats"
                 className="nav-link link"
                 href="#"
               >
@@ -44,19 +44,19 @@ const Navbar = () => {
         </nav>
           {isLogin ? (
             <div className="header-btn-login-container">
-              <Link to="/catopia/notifications">
+              <Link to="/notifications">
                 <NotificationsSvg />
               </Link>
-              <Link to="/catopia/profile">
+              <Link to="/profile">
                 <PersonSvg />
               </Link>
             </div>
           ) : (
             <div className="header-btn-container">
-              <NavLink to="/catopia/login" className="login-btn link">
+              <NavLink to="/login" className="login-btn link">
                 Login
               </NavLink>
-              <NavLink to="/catopia/register" className="signup-btn link">
+              <NavLink to="/register" className="signup-btn link">
                 Sign Up
               </NavLink>
             </div>

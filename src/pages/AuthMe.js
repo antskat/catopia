@@ -27,11 +27,11 @@ const AuthMe = () => {
         console.log('Login successful');
         setLoginStatus(true);
         setAuthToken(authToken);
-        navigate('/catopia/home');
+        navigate('/home');
       } catch (error) {
         console.error('Login failed', error);
         setLoginStatus(false);
-        navigate('/catopia/home'); // Додано перенаправлення на сторінку логіну в разі неуспішного входу
+        navigate('/home'); // Додано перенаправлення на сторінку логіну в разі неуспішного входу
       }
     };
 

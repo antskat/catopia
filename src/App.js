@@ -18,12 +18,12 @@ function App() {
   const location = useLocation();
 
   const hide =
-    location.pathname === '/catopia/register' ||
-    location.pathname === '/catopia/login' ||
-    location.pathname === '/catopia/forgot-password' ||
-    location.pathname === '/catopia/confirm' ||
-    location.pathname === '/catopia/change-password' ||
-    location.pathname === '/catopia/auth/me';
+    location.pathname === '/register' ||
+    location.pathname === '/login' ||
+    location.pathname === '/forgot-password' ||
+    location.pathname === '/confirm' ||
+    location.pathname === '/change-password' ||
+    location.pathname === '/auth/me';
 
   return (
     <div className="App">
@@ -32,15 +32,15 @@ function App() {
       <ScrollControl />
 
       <Routes>
-        <Route path="/catopia/" element={<CatopiaRedirect />} />
-        <Route path="/catopia/auth/me" element={<AuthMe />} />
-        <Route path="/catopia/home" element={<Home />} />
-        <Route path="/catopia/about-cats" element={<AboutCats />} />
-        <Route path="/catopia/register" element={<Register />} />
-        <Route path="/catopia/login" element={<Login />} />
-        <Route path="/catopia/forgot-password" element={<ForgotPass />} />
-        <Route path="/catopia/confirm" element={<ConfirmPass />} />
-        <Route path="/catopia/change-password" element={<ChangePass />} />
+        <Route path="/" element={<CatopiaRedirect />} />
+        <Route path="/auth/me" element={<AuthMe />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about-cats" element={<AboutCats />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPass />} />
+        <Route path="/confirm" element={<ConfirmPass />} />
+        <Route path="/change-password" element={<ChangePass />} />
       </Routes>
 
       {!hide && <Footer />}
