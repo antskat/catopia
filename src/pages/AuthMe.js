@@ -19,7 +19,7 @@ const AuthMe = () => {
 
         const response = await axios.post('https://catopia-backendd.onrender.com/auth/me', null, {
           headers: {
-            Authorization: authToken,
+            Authorization: `Bearer ${authToken}`,
           },
         });
 
