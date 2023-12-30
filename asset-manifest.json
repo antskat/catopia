@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/catopia/static/css/main.2dfd7cfc.css",
-    "main.js": "/catopia/static/js/main.d1742bc8.js",
+    "main.css": "/catopia/static/css/main.fca58063.css",
+    "main.js": "/catopia/static/js/main.18ccd418.js",
     "static/media/orange-and-grey-cats-img.png": "/catopia/static/media/orange-and-grey-cats-img.ae3620e894d392c50873.png",
     "static/media/about-hero-bg.jpg": "/catopia/static/media/about-hero-bg.05e6743c706ec278b100.jpg",
     "static/media/british-shortcair-cat.png": "/catopia/static/media/british-shortcair-cat.d0285bda2d0e7ed642d4.png",
@@ -14,18 +14,36 @@
     "static/media/sphynx.png": "/catopia/static/media/sphynx.b5b0bc386bd618efdbf8.png",
     "static/media/cats-svg.jpg": "/catopia/static/media/cats-svg.e66bebeeb1c673bebc47.jpg",
     "static/media/munchkin-cat.png": "/catopia/static/media/munchkin-cat.7c4ffda22d8e7b808ad4.png",
+    "static/media/scottish-fold-cat.png": "/catopia/static/media/scottish-fold-cat.ddd700d266c74d2b2748.png",
+    "static/media/persian-cat.png": "/catopia/static/media/persian-cat.216a07ff10243aacd28f.png",
+    "static/media/oriental-cat.png": "/catopia/static/media/oriental-cat.8a4fe3bf8f46378f8ec6.png",
+    "static/media/bengal-cat.png": "/catopia/static/media/bengal-cat.b33fd9d4ee3c784831d3.png",
+    "static/media/siberian-cat.png": "/catopia/static/media/siberian-cat.577add1b7a514a152ea6.png",
     "static/media/black-and-grey-cats-img.jpg": "/catopia/static/media/black-and-grey-cats-img.8bdc5735ebb4224aa056.jpg",
+    "static/media/norwegian-forest-cat.png": "/catopia/static/media/norwegian-forest-cat.f2c16e4c57ddb3b931e7.png",
+    "static/media/ragdoll-cat.png": "/catopia/static/media/ragdoll-cat.846c9a94fff552a499cb.png",
+    "static/media/cornish-rex.png": "/catopia/static/media/cornish-rex.5f565e1f6f5a28378726.png",
+    "static/media/australian-mist-cat.png": "/catopia/static/media/australian-mist-cat.c5be4e1fc9b5be2c7450.png",
+    "static/media/nebelung-cat.png": "/catopia/static/media/nebelung-cat.f638fc4ccaf134d658d4.png",
     "static/media/hero-bg.jpg": "/catopia/static/media/hero-bg.d5c9e9f90933494313ab.jpg",
+    "static/media/domestic-shorthair-cat.png": "/catopia/static/media/domestic-shorthair-cat.4900506adc3b7ecb61b9.png",
+    "static/media/birman-cat.png": "/catopia/static/media/birman-cat.6fee81cd097b760e8fa5.png",
+    "static/media/maine-coon-cat.png": "/catopia/static/media/maine-coon-cat.4b0e1ffd300e99957920.png",
+    "static/media/somali-cat.png": "/catopia/static/media/somali-cat.3e952a5d5a2936c0028f.png",
     "static/media/cat-card-bg.jpg": "/catopia/static/media/cat-card-bg.7aa4ced54ce63ca3f80a.jpg",
+    "static/media/singapura-cat.png": "/catopia/static/media/singapura-cat.75b39c70d45bf1c5aec8.png",
+    "static/media/chartreux-cat.png": "/catopia/static/media/chartreux-cat.1f0cf10ad204d1da037b.png",
+    "static/media/burmila-cat.png": "/catopia/static/media/burmila-cat.c341c11c41b1582de749.png",
+    "static/media/bombay-cat.png": "/catopia/static/media/bombay-cat.ca7825e257eea77d97cc.png",
     "static/media/paw1.svg": "/catopia/static/media/paw1.211ffd56e737f0aa9054.svg",
     "static/media/paw.svg": "/catopia/static/media/paw.3af4c33853ffb60f2570.svg",
     "static/media/paw2.svg": "/catopia/static/media/paw2.2586149187f5c27023d1.svg",
     "index.html": "/catopia/index.html",
-    "main.2dfd7cfc.css.map": "/catopia/static/css/main.2dfd7cfc.css.map",
-    "main.d1742bc8.js.map": "/catopia/static/js/main.d1742bc8.js.map"
+    "main.fca58063.css.map": "/catopia/static/css/main.fca58063.css.map",
+    "main.18ccd418.js.map": "/catopia/static/js/main.18ccd418.js.map"
   },
   "entrypoints": [
-    "static/css/main.2dfd7cfc.css",
-    "static/js/main.d1742bc8.js"
+    "static/css/main.fca58063.css",
+    "static/js/main.18ccd418.js"
   ]
 }
