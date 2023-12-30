@@ -104,14 +104,11 @@ img {
 .swiper {
   margin-top: 60px;
   position: relative;
-  /* padding: 20px 20px 90px; */
-}
-.swiper-wrapper {
-  padding: 20px 20px 230px;
-  border-radius: 30px;
-  background: rgba(112, 139, 117, 0.25);
 }
 .swiper-list {
+  padding: 20px 20px 230px;
+  border-radius: 30px;
+  background: #708b7540;
   display: flex;
   flex-wrap: wrap;
   column-gap: 30px;

@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <div className="container">
-        <NavLink to="/" className="logo link">
+        <NavLink to="/catopia/" className="logo link">
           cat
           <span className="logo-span">
             <LogoSvg />
@@ -14,12 +14,12 @@ const Navbar = () => {
         <nav className="nav">
           <ul className="nav-list list">
             <li className="nav-list-item">
-              <NavLink to="/" className="nav-link link">
+              <NavLink to="/catopia/" className="nav-link link">
                 Home
               </NavLink>
             </li>
             <li className="nav-list-item">
-              <NavLink to="/about-cats" className="nav-link link" href="#">
+              <NavLink to="/catopia/about-cats" className="nav-link link" href="#">
                 About cats
               </NavLink>
             </li>
@@ -36,10 +36,10 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className="header-btn-container">
-          <NavLink to="/login" className="login-btn link">
+          <NavLink to="/catopia/login" className="login-btn link">
             Login
           </NavLink>
-          <NavLink to="/register" className="signup-btn link">
+          <NavLink to="/catopia/register" className="signup-btn link">
             Sign Up
           </NavLink>
         </div>
