@@ -13,6 +13,8 @@ const AuthMe = () => {
         // Отримуємо токен з localStorage
         const authToken = localStorage.getItem('authToken');
 
+        console.log(authToken);
+
         if (!authToken) {
           throw new Error('No authentication token available.');
         }
