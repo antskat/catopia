@@ -3,6 +3,8 @@ import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../utils/authContext.js";
 import { PersonSvg, NotificationsSvg } from "../components/Svg.js";
 const Navbar = () => {
+  const activeLink = ({ isActive }) =>
+    isActive ? "nav-link nav-link-active link" : "nav-link link";
   const { isLogin } = useAuth();
   return (
     <header className="header">
@@ -17,14 +19,14 @@ const Navbar = () => {
         <nav className="nav">
           <ul className="nav-list list">
             <li className="nav-list-item">
-              <NavLink to="/home" className="nav-link link">
+              <NavLink to="/home" className={activeLink}>
                 Home
               </NavLink>
             </li>
             <li className="nav-list-item">
               <NavLink
                 to="/about-cats"
-                className="nav-link link"
+                className={activeLink}
                 href="#"
               >
                 About cats

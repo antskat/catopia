@@ -82,10 +82,32 @@ img {
   gap: 58px;
 }
 .nav-link {
-  color: var(--main-color);
+  color: rgba(112, 139, 117, 0.75);;
   font-size: 20px;
   font-weight: 500;
   line-height: normal;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: var(--main-color);
+}
+.nav-link-active {
+	position: relative;
+  color: var(--main-color);
+}
+
+.nav-link-active::before {
+	content: '';
+
+	position: absolute;
+	left: 0;
+	top: 193%;
+  border-radius: 2px;
+
+	display: block;
+	height: 4px;
+	width: 100%;
+	background-color: var(--main-color);
 }
 .header-btn-container {
   display: flex;
