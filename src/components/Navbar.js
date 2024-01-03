@@ -10,7 +10,7 @@ const UserProfile = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8888/getAvatar", {
+      .get("https://catopia-backendd.onrender.com/getAvatar", {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
@@ -37,7 +37,7 @@ const UserProfile = () => {
         <Link to="/profile">
           <img
             style={{ borderRadius: "50%", width: "40px", height: "40px" }}
-            src={`http://localhost:8888/avatars/${avatar}`}
+            src={`https://catopia-backendd.onrender.com/avatars/${avatar}`}
             alt="User Avatar"
           />
         </Link>
