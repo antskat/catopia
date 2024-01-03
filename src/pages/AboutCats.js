@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import "./styles/swiper.css";
+import "../styles/swiper.css";
 import "../styles/about-cats.css";
 import CatCard from "../components/CatCard";
 import BritishShorthairCat from "../img/british-shortcair-cat.png";

@@ -1,7 +1,55 @@
 import { LogoSvg } from "../components/Svg.js";
 import { NavLink, Link } from "react-router-dom";
+import { React, useState, useEffect } from "react";
 import { useAuth } from "../utils/authContext.js";
 import { PersonSvg, NotificationsSvg } from "../components/Svg.js";
+import axios from "axios";
+const UserProfile = () => {
+  const { authToken } = useAuth();
+  const [avatar, setAvatar] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8888/getAvatar", {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      })
+      .then((response) => {
+        const avatarFileName = response.data.avatar;
+
+        // Перевірка на правильний тип аватара
+        if (typeof avatarFileName === 'string' && avatarFileName !== 'null') {
+          setAvatar(avatarFileName);
+        } else {
+          setAvatar(null);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        setAvatar(null);
+      });
+  }, [authToken]);
+
+  return (
+    <div>
+      {avatar !== null ? (
+        <Link to="/profile">
+          <img
+            style={{ borderRadius: "50%", width: "40px", height: "40px" }}
+            src={`http://localhost:8888/avatars/${avatar}`}
+            alt="User Avatar"
+          />
+        </Link>
+      ) : (
+        <Link to="/profile">
+          <PersonSvg />
+        </Link>
+      )}
+    </div>
+  );
+};
+
 const Navbar = () => {
   const activeLink = ({ isActive }) =>
     isActive ? "nav-link nav-link-active link" : "nav-link link";
@@ -24,11 +72,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-list-item">
-              <NavLink
-                to="/about-cats"
-                className={activeLink}
-                href="#"
-              >
+              <NavLink to="/about-cats" className={activeLink} href="#">
                 About cats
               </NavLink>
             </li>
@@ -44,25 +88,23 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-          {isLogin ? (
-            <div className="header-btn-login-container">
-              <Link to="/notifications">
-                <NotificationsSvg />
-              </Link>
-              <Link to="/profile">
-                <PersonSvg />
-              </Link>
-            </div>
-          ) : (
-            <div className="header-btn-container">
-              <NavLink to="/login" className="login-btn link">
-                Login
-              </NavLink>
-              <NavLink to="/register" className="signup-btn link">
-                Sign Up
-              </NavLink>
-            </div>
-          )}
+        {isLogin ? (
+          <div className="header-btn-login-container">
+            <Link to="/notifications">
+              <NotificationsSvg />
+            </Link>
+            <UserProfile />
+          </div>
+        ) : (
+          <div className="header-btn-container">
+            <NavLink to="/login" className="login-btn link">
+              Login
+            </NavLink>
+            <NavLink to="/register" className="signup-btn link">
+              Sign Up
+            </NavLink>
+          </div>
+        )}
       </div>
       <hr />
     </header>

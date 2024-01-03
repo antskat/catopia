@@ -7,7 +7,6 @@ export const AuthProvider = ({ children }) => {
   const [authToken, setAuthToken] = useState(null);
 
   useEffect(() => {
-    // При ініціалізації компонента читаємо дані з localStorage
     const storedLoginStatus = localStorage.getItem('isLogin');
     const storedAuthToken = localStorage.getItem('authToken');
 
@@ -22,7 +21,6 @@ export const AuthProvider = ({ children }) => {
 
   const setLoginStatus = (status) => {
     setIsLogin(status);
-    // Зберігаємо дані у localStorage при кожній зміні стану
     localStorage.setItem('isLogin', JSON.stringify(status));
   };
 

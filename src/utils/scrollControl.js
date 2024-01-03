@@ -13,7 +13,7 @@ const ScrollControl = () => {
       document.body.style.overflow = "visible";
     };
 
-    if (location.pathname === "/catopia/login") {
+    if (location.pathname === "/login") {
       hideScroll();
     } else {
       showScroll();
