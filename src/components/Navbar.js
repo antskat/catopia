@@ -37,7 +37,7 @@ const UserProfile = () => {
         <Link to="/profile">
           <img
             style={{ borderRadius: "50%", width: "40px", height: "40px" }}
-            src={`https://catopia-backendd.onrender.com/avatars/${avatar}`}
+            src={`https://catopia-backendd.onrender.com/uploads/${avatar}`}
             alt="User Avatar"
           />
         </Link>
