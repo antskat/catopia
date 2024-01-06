@@ -26,15 +26,19 @@
   height: 100%;
   background-color: #e4e9e5;
 }
+.text-container {
+  padding: 17px 30px 17px 60px;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .profile-info-title {
   color: rgba(112, 139, 117, 0.75);
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
-  text-align: center;
-  padding: 17px 0;
-  width: 100%;
-  background-color: #fff;
 }
 .avatar-container-container {
   height: 185px;
@@ -46,6 +50,8 @@
   top: 45px;
   left: 60px;
   z-index: 100;
+  background-color: #fff;
+  border-radius: 50%;
 }
 .avatar-edit-btn {
   border: none;
@@ -98,6 +104,79 @@
   font-size: 20px;
   font-weight: 500;
   line-height: normal;
+}
+
+.social-links-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   position: absolute;
   right: 20px;
+}
+.social-links-list-item:first-child > .social-link > svg {
+  width: 35px;
+  height: 31px;
+  fill: rgba(112, 139, 117, 0.5);
+}
+.social-links-list-item:nth-child(2) > .social-link > svg {
+  width: 30px;
+  height: 31px;
+  fill: rgba(112, 139, 117, 0.5);
+}
+.social-links-list-item:last-child > .social-link > svg {
+  width: 30px;
+  height: 31px;
+  fill: rgba(112, 139, 117, 0.5);
+}
+
+.profile-content {
+  padding: 40px 60px 0;
+}
+.my-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.profile-content-list {
+  display: flex;
+  gap: 30px;
+}
+.profile-list-btn {
+  padding: 10px 10px 10px 25px;
+  border: none;
+  border-radius: 40px;
+  background-color: #fff;
+  color: rgba(112, 139, 117, 0.75);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 443px;
+}
+
+.my-post {
+  border: none;
+  border-radius: 30px 30px 0px 0px;
+  background: #fff;
+  padding: 30px 30px 17px;
+}
+.my-post-user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.my-post-user-info-name {
+  color: #708b75;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+.my-post-user-info-date {
+  color: rgba(112, 139, 117, 0.5);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
 }

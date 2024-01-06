@@ -17,9 +17,9 @@ export const AuthProvider = ({ children }) => {
     if (storedAuthToken) {
       setAuthToken(storedAuthToken);
     }
-  }, []);
+  }, [authToken]); 
 
-  const setLoginStatus = (status) => {
+  const setLoginStatus = (status) => {  
     setIsLogin(status);
     localStorage.setItem('isLogin', JSON.stringify(status));
   };
@@ -32,5 +32,8 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => {
-  return useContext(AuthContext);
+  const context = useContext(AuthContext);
+  console.log("Current AuthContext in useAuth:", context);
+
+  return context;
 };

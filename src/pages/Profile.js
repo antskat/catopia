@@ -8,8 +8,112 @@ import {
   SaveSvg,
   CommentSvg,
   LikeSvg,
+  PlusSvg,
   AvatarSvg,
+  SmallAvatarSvg,
+  BackSvg,
+  TwitterSvg,
+  FacebookSvg,
+  InstagramSvg,
 } from "../components/Svg.js";
+import { React, useState, useEffect } from "react";
+import { useAuth } from "../utils/authContext.js";
+import axios from "axios";
+import AllUserProfile from "../utils/getUser.js";
+const UserProfile = () => {
+  const { authToken } = useAuth();
+  const [avatar, setAvatar] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("https://catopia-backendd.onrender.com/getAvatar", {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      })
+      .then((response) => {
+        const avatarFileName = response.data.avatar;
+
+        // Перевірка на правильний тип аватара
+        if (typeof avatarFileName === "string" && avatarFileName !== "null") {
+          setAvatar(avatarFileName);
+        } else {
+          setAvatar(null);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        setAvatar(null);
+      });
+  }, [authToken]);
+
+  return (
+    <div>
+      {avatar !== null ? (
+        <img
+          style={{ borderRadius: "50%", width: "200px", height: "200px" }}
+          src={`https://catopia-backendd.onrender.com/uploads/${avatar}`}
+          alt="User Avatar"
+        />
+      ) : (
+        <AvatarSvg />
+      )}
+    </div>
+  );
+};
+const SmallUserProfile = () => {
+  const { authToken } = useAuth();
+  const [avatar, setAvatar] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("https://catopia-backendd.onrender.com/getAvatar", {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      })
+      .then((response) => {
+        const avatarFileName = response.data.avatar;
+
+        // Перевірка на правильний тип аватара
+        if (typeof avatarFileName === "string" && avatarFileName !== "null") {
+          setAvatar(avatarFileName);
+        } else {
+          setAvatar(null);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        setAvatar(null);
+      });
+  }, [authToken]);
+
+  return (
+    <div>
+      {avatar !== null ? (
+        <img
+          style={{ borderRadius: "50%", width: "60px", height: "60px" }}
+          src={`https://catopia-backendd.onrender.com/uploads/${avatar}`}
+          alt="User Avatar"
+        />
+      ) : (
+        <SmallAvatarSvg />
+      )}
+    </div>
+  );
+};
+const UserName = () => {
+  const userProfile = AllUserProfile();
+  const name = userProfile ? userProfile.name : null;
+  return <p className="my-post-user-info-name">{name ? name : "User Name"}</p>;
+};
+
+const UserDate = () => {
+  const userProfile = AllUserProfile();
+  const date = userProfile ? userProfile.createdAt : null;
+  return <p className="my-post-user-info-date">{date ? date : "Date"}</p>;
+};
+
 const Profile = () => {
   return (
     <div className="profile">
@@ -29,10 +133,19 @@ const Profile = () => {
       </section>
       <section className="profile-section">
         <div className="profile-info">
-          <p className="profile-info-title">Profile</p>
+          <div className="text-container">
+            <NavLink to="/home" className="profile-back-btn">
+              <BackSvg />
+            </NavLink>
+            <p className="profile-info-title">Profile</p>
+            <button className="settings-btn">
+              Settings
+              <SettingsSvg />
+            </button>
+          </div>
           <div className="avatar-container-container">
             <div className="avatar-container">
-              <AvatarSvg />
+              <UserProfile />
               <button className="avatar-edit-btn">
                 <EditSvg />
               </button>
@@ -53,31 +166,48 @@ const Profile = () => {
                 <p className="profile-text">following</p>
               </li>
             </ul>
-            <button className="settings-btn">
-              Settings
-              <SettingsSvg />
-            </button>
+            <ul className="social-links-list list">
+              <li className="social-links-list-item">
+                <a href="#" className="social-link link">
+                  <TwitterSvg />
+                </a>
+              </li>
+              <li className="social-links-list-item">
+                <a href="#" className="social-link link">
+                  <FacebookSvg />
+                </a>
+              </li>
+              <li className="social-links-list-item">
+                <a href="#" className="social-link link">
+                  <InstagramSvg />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="profile-content">
           <div className="my-info">
             <ul className="profile-content-list list">
               <li className="profile-content-list-item">
-                <button className="profile-list-btn">Search by tag</button>
+                <button className="profile-list-btn">
+                  Search by tag
+                  <SearchSvg />
+                </button>
               </li>
               <li className="profile-content-list-item">
-                <button className="profile-list-btn">Create a post</button>
+                <button className="profile-list-btn">
+                  Create a post
+                  <PlusSvg />
+                </button>
               </li>
             </ul>
             <div className="my-post">
               <div className="my-post-main-container">
                 <div className="my-post-user-info">
-                  <img src="" alt="" />
+                  <SmallUserProfile />
                   <div className="my-post-user-info-text">
-                    <p className="my-post-user-info-name">User Name</p>
-                    <p className="my-post-user-info-date">
-                      30 Dec 2023 at 17:52
-                    </p>
+                    <UserName />
+                    <UserDate />
                   </div>
                 </div>
                 <button className="my-post-detail-btn"></button>
@@ -100,7 +230,6 @@ const Profile = () => {
                 </ul>
               </div>
               <div className="my-post-main-container">
-                <img src="" alt="" />
                 <ul className="my-post-img-list list">
                   <li className="my-post-img-list-item">
                     <img src="" alt="" />
